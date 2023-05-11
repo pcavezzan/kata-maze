@@ -5,10 +5,15 @@ import java.util.List;
 import java.util.Random;
 
 public class Maze {
+    private final int rows;
+    private final int columns;
+
+    public Maze(int rows, int columns) {
+        this.rows = rows;
+        this.columns = columns;
+    }
 
     public String run() {
-        int rows = 7;
-        int columns = 7;
         Cell[][] grid = new Cell[rows][columns];
         Random r = new Random();
 

@@ -7,10 +7,14 @@ public class MazeTest {
 
     @Test
     void test_maze_generation() {
-        final var maze  = new Maze();
+        final var maze  = new Maze(1, 1);
 
         String run = maze.run();
 
-        Assertions.fail("does not same output");
+        Assertions.assertEquals(run, """
+                +---+
+                |   |
+                +---+
+                """);
     }
 }
