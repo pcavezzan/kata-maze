@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Maze {
 
-    public void run() {
+    public String run() {
         int rows = 7;
         int columns = 7;
         Cell[][] grid = new Cell[rows][columns];
@@ -90,7 +90,9 @@ public class Maze {
             sb.append(bottom).append("\n");
         }
 
-        System.out.println(sb.toString());
+        final var mazeGenerated = sb.toString();
+        System.out.println(mazeGenerated);
+        return mazeGenerated;
     }
 
     private static Cell getGridCell(int row, int column, Cell[][] grid, int rows, int columns) {
